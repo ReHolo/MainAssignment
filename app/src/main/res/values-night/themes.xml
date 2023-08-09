@@ -1,0 +1,23 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.StManage" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    </style>
+
+    <!--- Dark mode -->
+    <!-- Background on dark mode -->
+    <style name="SCREEN_BACKGROUND">
+        <item name="android:background">#000000</item>
+    </style>
+
+    <!-- Text color -->
+    <style name="TEXTS">
+        <item name="android:textColor">#FFFFFF</item>
+    </style>
+
+    <!-- button background when light mode -->
+    <style name="BUTTON">
+        <item name="android:background">@color/teal_700</item>
+    </style>
+</resources>

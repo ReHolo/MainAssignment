@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startScreen">
+
+    <fragment
+        android:id="@+id/startScreen"
+        android:name="com.example.stmanage.presentation.fragments.StartScreen"
+        android:label="fragment_start_screen"
+        tools:layout="@layout/fragment_start_screen">
+        <action
+            android:id="@+id/action_startScreen_to_accountOptionScreen"
+            app:destination="@id/accountOptionScreen"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpScreen"
+        android:name="com.example.stmanage.presentation.fragments.SignUpScreen"
+        android:label="fragment_sign_up_screen"
+        tools:layout="@layout/fragment_sign_up_screen">
+        <action
+            android:id="@+id/action_signUpScreen_to_loginScreen"
+            app:destination="@id/loginScreen"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginScreen"
+        android:name="com.example.stmanage.presentation.fragments.LoginScreen"
+        android:label="fragment_login_screen"
+        tools:layout="@layout/fragment_login_screen">
+        <action
+            android:id="@+id/action_loginScreen_to_signUpScreen"
+            app:destination="@id/signUpScreen"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_loginScreen_to_detailsScreen"
+            app:destination="@id/detailsScreen"
+            app:popUpTo="@id/loginScreen" />
+    </fragment>
+    <fragment
+        android:id="@+id/accountOptionScreen"
+        android:name="com.example.stmanage.presentation.fragments.AccountOptionScreen"
+        android:label="fragment_account_option_screen"
+        tools:layout="@layout/fragment_account_option_screen">
+        <action
+            android:id="@+id/action_accountOptionScreen_to_signUpScreen"
+            app:destination="@id/signUpScreen"
+            app:enterAnim="@anim/from_bottom"
+            app:exitAnim="@anim/to_left"
+            app:popUpTo="@id/accountOptionScreen"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_accountOptionScreen_to_loginScreen"
+            app:destination="@id/loginScreen"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_left"
+            app:popUpTo="@id/accountOptionScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailsScreen"
+        android:name="com.example.stmanage.presentation.fragments.DetailsScreen"
+        android:label="fragment_details_screen"
+        tools:layout="@layout/fragment_details_screen">
+        <action
+            android:id="@+id/action_detailsScreen_to_accountOptionScreen"
+            app:destination="@id/accountOptionScreen"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_detailsScreen_to_addDetailsScreen"
+            app:destination="@id/addDetailsScreen"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popUpTo="@id/detailsScreen"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/addDetailsScreen"
+        android:name="com.example.stmanage.presentation.fragments.AddDetailsScreen"
+        android:label="fragment_add_details_screen"
+        tools:layout="@layout/fragment_add_details_screen">
+        <action
+            android:id="@+id/action_addDetailsScreen_to_detailsScreen"
+            app:destination="@id/detailsScreen"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popUpTo="@id/detailsScreen"
+            app:popUpToInclusive="false" />
+    </fragment>
+</navigation>

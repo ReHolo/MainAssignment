@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".presentation.fragments.LoginScreen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingStart="50dp"
+        android:orientation="vertical"
+        android:paddingEnd="50dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="100dp"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_kleine_shape"/>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/stmanage"
+                android:fontFamily="@font/oswald_medium"
+                android:textAlignment="center"
+                android:layout_marginStart="5dp"
+                android:textColor="@color/black"
+                android:textSize="30sp"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_marginTop="40dp"
+            android:layout_height="wrap_content"
+            android:text="@string/login"
+            android:textSize="20sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:padding="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/don_t_have_an_account"/>
+
+            <TextView
+                android:id="@+id/tvRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/register_"
+                android:layout_marginStart="4dp"
+                android:textColor="@color/sky_blue"
+                />
+
+        </LinearLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tiLoginEmailAddress"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/email_address">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etEmailLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tiLoginPassword"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:hint="@string/password"
+            app:endIconMode="password_toggle"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/outlinedTextField3">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/etPasswordLogin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/tvResetPassword"
+            android:layout_width="match_parent"
+            android:textColor="@color/sky_blue"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="@string/forgot_password"
+            android:padding="3dp"/>
+
+        <Button
+            android:id="@+id/btnLogin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/_login"
+            android:layout_marginTop="20dp"
+            android:backgroundTint="@color/sky_blue"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginTop="20dp"
+            android:padding="5dp"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/google"
+                    android:paddingEnd="10dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:text="@string/google"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/twitter"
+                    android:paddingEnd="10dp"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="20dp"
+                    android:layout_weight="1"
+                    android:text="@string/twitter"
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
